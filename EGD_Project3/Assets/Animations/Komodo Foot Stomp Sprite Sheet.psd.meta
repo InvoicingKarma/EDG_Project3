@@ -1,19 +1,13 @@
 fileFormatVersion: 2
-guid: 729c53ea1e938984f96867aabc8df362
+guid: 00a4837657edfa14297358d00bc982be
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6554737276630055026
-    second: Komodo Foot Sprite Sheet_0
+      213: -3131168847173964102
+    second: Komodo Foot Stomp Sprite Sheet_0
   - first:
-      213: 6536837267478390795
-    second: Komodo Foot Sprite Sheet_1
-  - first:
-      213: -3113863494955791883
-    second: Komodo Foot Sprite Sheet_2
-  - first:
-      213: 6315953935803952542
-    second: Komodo Foot Sprite Sheet_3
+      213: -3279522702811117218
+    second: Komodo Foot Stomp Sprite Sheet_1
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -98,7 +92,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Komodo Foot Sprite Sheet_0
+      name: Komodo Foot Stomp Sprite Sheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -112,14 +106,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b341e1f73b181d4ba316f49e78653ca
-      internalID: 6554737276630055026
+      spriteID: 366e234dbd3f00848b71d9369c8e8889
+      internalID: -3131168847173964102
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Komodo Foot Sprite Sheet_1
+      name: Komodo Foot Stomp Sprite Sheet_1
       rect:
         serializedVersion: 2
         x: 700
@@ -133,50 +127,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b86c443b5d6107e47ba41c65a1987473
-      internalID: 6536837267478390795
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Komodo Foot Sprite Sheet_2
-      rect:
-        serializedVersion: 2
-        x: 1400
-        y: 0
-        width: 700
-        height: 600
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 950340596e003ed4680dbc435c103058
-      internalID: -3113863494955791883
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Komodo Foot Sprite Sheet_3
-      rect:
-        serializedVersion: 2
-        x: 2100
-        y: 0
-        width: 700
-        height: 600
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8f7050ff275252041ba49c01fa62bce5
-      internalID: 6315953935803952542
+      spriteID: 27b0f56875004ca42ba58fbc908de37f
+      internalID: -3279522702811117218
       vertices: []
       indices: 
       edges: []
