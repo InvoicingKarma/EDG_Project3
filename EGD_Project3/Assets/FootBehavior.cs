@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FootBehavior : MonoBehaviour
 {
@@ -53,6 +54,7 @@ public class FootBehavior : MonoBehaviour
         {
             anim.clip = stomp;
             anim.Play();
+            Debug.Log("I played the animation");
 
             Vector2 goat_pos = goat.transform.position;
             Vector2 foot_pos = foot.transform.position;
