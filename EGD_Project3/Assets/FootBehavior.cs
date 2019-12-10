@@ -7,10 +7,13 @@ public class FootBehavior : MonoBehaviour
     Vector2 bounds = new Vector2(9f, 5f);
     public float speed = 2.0f;
     Rigidbody2D rb;
+    public bool enter = true;
+    public GameObject goat;
 
     // Start is called before the first frame update
     void Start()
     {
+        goat = GameObject.FindGameObjectWithTag("Goat");
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -43,7 +46,11 @@ public class FootBehavior : MonoBehaviour
 
         if (Input.GetKey(KeyCode.RightShift))
         {
-
+            Debug.Log("I was pressed");
+            //Play the stomp animation
+            //Look to see if the goat is under it
+                //if it is tell it that and have it play the stomped animation and start respawning
+            //Add a tally to a score tracker?
         }
     }
 }

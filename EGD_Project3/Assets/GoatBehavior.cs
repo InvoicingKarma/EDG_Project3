@@ -9,8 +9,6 @@ public class GoatBehavior : MonoBehaviour
     Rigidbody2D rb;
     public static bool respawning = false;
     public GameObject foot;
-    public bool colliderEnabled;
-
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +25,7 @@ public class GoatBehavior : MonoBehaviour
 
         if (respawning == true)
         {
-            colliderEnabled = false;
+            //prevent the foot from stomping it again
         }
 
         transform.position = my_math.Wrap(transform.position, bounds);
@@ -55,9 +53,8 @@ public class GoatBehavior : MonoBehaviour
 
     void RespawnGoat()
     {
-        //Do the squish animation
-        //Give some invulnerability frames so they can skedaddle
-        colliderEnabled = true;
+        //Do the stomped animation
+        //Give some invulnerability frames so they can move away
         respawning = false;
     }
 
@@ -72,7 +69,6 @@ public class GoatBehavior : MonoBehaviour
 
         if (objectTag == "Foot")
         {
-            colliderEnabled = false;
             respawning = true;
             Invoke("RespawnGoat", 3f);
             Debug.Log("We hit it!");
