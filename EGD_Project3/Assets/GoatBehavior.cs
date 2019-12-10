@@ -8,15 +8,15 @@ public class GoatBehavior : MonoBehaviour
     public float speed = 2.0f;
     Rigidbody2D rb;
     public static bool respawning = false;
-    public GameObject foot = GameObject.FindGameObjectWithTag("Foot");
-    Animator animator;
+    public GameObject foot;
+    public bool colliderEnabled;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        foot = GameObject.FindGameObjectWithTag("Foot");
         rb = GetComponent<Rigidbody2D>();
-        animator.GetComponent<Animator>();
-
         respawning = false;
     }
 
@@ -24,6 +24,11 @@ public class GoatBehavior : MonoBehaviour
     void Update()
     {
         Vector3 totalMovement = Vector3.zero;
+
+        if (respawning == true)
+        {
+            colliderEnabled = false;
+        }
 
         transform.position = my_math.Wrap(transform.position, bounds);
 
@@ -50,7 +55,9 @@ public class GoatBehavior : MonoBehaviour
 
     void RespawnGoat()
     {
-
+        //Do the squish animation
+        //Give some invulnerability frames so they can skedaddle
+        colliderEnabled = true;
         respawning = false;
     }
 
@@ -65,9 +72,10 @@ public class GoatBehavior : MonoBehaviour
 
         if (objectTag == "Foot")
         {
-            //Do the squish animation
+            colliderEnabled = false;
             respawning = true;
             Invoke("RespawnGoat", 3f);
+            Debug.Log("We hit it!");
         }
     }
 }

@@ -40,5 +40,10 @@ public class FootBehavior : MonoBehaviour
 
         // To ensure same speed on the diagonal, we ensure its magnitude here instead of earlier
         rb.MovePosition(transform.position + totalMovement.normalized * speed * Time.deltaTime);
+
+        if (Input.GetKey(KeyCode.RightShift))
+        {
+
+        }
     }
 }
