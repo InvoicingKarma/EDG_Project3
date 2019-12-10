@@ -8,7 +8,7 @@ AnimationClip:
   m_PrefabAsset: {fileID: 0}
   m_Name: GOAT Skip
   serializedVersion: 6
-  m_Legacy: 0
+  m_Legacy: 1
   m_Compressed: 0
   m_UseHighQualityCurve: 1
   m_RotationCurves: []
@@ -44,20 +44,8 @@ AnimationClip:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
   m_ClipBindingConstant:
-    genericBindings:
-    - serializedVersion: 2
-      path: 0
-      attribute: 0
-      script: {fileID: 0}
-      typeID: 212
-      customType: 23
-      isPPtrCurve: 1
-    pptrCurveMapping:
-    - {fileID: 2862074496501182815, guid: cf5ea8091c64f894b93131e5a7f885a0, type: 3}
-    - {fileID: -4399710656451241246, guid: cf5ea8091c64f894b93131e5a7f885a0, type: 3}
-    - {fileID: -8502227571508898274, guid: cf5ea8091c64f894b93131e5a7f885a0, type: 3}
-    - {fileID: -6238268205133102522, guid: cf5ea8091c64f894b93131e5a7f885a0, type: 3}
-    - {fileID: 3886289117237937236, guid: cf5ea8091c64f894b93131e5a7f885a0, type: 3}
+    genericBindings: []
+    pptrCurveMapping: []
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
