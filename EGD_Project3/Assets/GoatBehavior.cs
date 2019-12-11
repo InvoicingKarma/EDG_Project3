@@ -11,6 +11,7 @@ public class GoatBehavior : MonoBehaviour
     public static bool respawning = false;
     public GameObject foot;
     private Animator animator;
+    private SpriteRenderer spriteRenderer;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +20,7 @@ public class GoatBehavior : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         respawning = false;
         animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -38,6 +40,7 @@ public class GoatBehavior : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.A))
         {
+            spriteRenderer.flipX = true;
             totalMovement -= transform.right;
         }
         if (Input.GetKey(KeyCode.S))
@@ -46,6 +49,7 @@ public class GoatBehavior : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.D))
         {
+            spriteRenderer.flipX = false;
             totalMovement += transform.right;
         }
 
