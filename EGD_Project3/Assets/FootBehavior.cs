@@ -67,6 +67,7 @@ public class FootBehavior : MonoBehaviour
             {
                 animator.SetBool("IsStomping", true);
                 Debug.Log("I missed the Goat");
+                animator.SetBool("IsStomping", false);
             }
             //if it hits tell it that and have the goat play the stomped animation and start respawning
         }

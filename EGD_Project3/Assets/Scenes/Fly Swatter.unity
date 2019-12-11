@@ -1258,7 +1258,7 @@ PrefabInstance:
     - target: {fileID: 8248866057425144282, guid: 83a512b3d2efe07429529a278fceac70,
         type: 3}
       propertyPath: m_FlipX
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83a512b3d2efe07429529a278fceac70, type: 3}

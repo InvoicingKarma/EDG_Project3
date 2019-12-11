@@ -55,7 +55,7 @@ public class GoatBehavior : MonoBehaviour
 
         animator.SetFloat("Speed", Mathf.Abs(totalMovement.magnitude));
         //Debug.Log(Mathf.Abs(totalMovement.magnitude));
-        
+
         // To ensure same speed on the diagonal, we ensure its magnitude here instead of earlier
         rb.MovePosition(transform.position + totalMovement.normalized * speed * Time.deltaTime);
         posLastFrame = transform.position;
