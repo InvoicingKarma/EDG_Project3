@@ -11,6 +11,8 @@ public class FootBehavior : MonoBehaviour
     public bool enter = true;
     public GameObject goat;
     public GameObject foot;
+    public Animator animator;
+
 
     // Start is called before the first frame update
     void Start()

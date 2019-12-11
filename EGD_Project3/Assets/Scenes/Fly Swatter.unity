@@ -664,6 +664,26 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 7429549319766324754, guid: ec571430968656e4bb3df4c5ea690e91,
+        type: 3}
+      propertyPath: goat
+      value: 
+      objectReference: {fileID: 1370918816}
+    - target: {fileID: 7429549319766324754, guid: ec571430968656e4bb3df4c5ea690e91,
+        type: 3}
+      propertyPath: foot
+      value: 
+      objectReference: {fileID: 1712782925}
+    - target: {fileID: 7429549319766324754, guid: ec571430968656e4bb3df4c5ea690e91,
+        type: 3}
+      propertyPath: enter
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7429549319766324754, guid: ec571430968656e4bb3df4c5ea690e91,
+        type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1712782926}
     m_RemovedComponents:
     - {fileID: 4918390499972416413, guid: ec571430968656e4bb3df4c5ea690e91, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ec571430968656e4bb3df4c5ea690e91, type: 3}
