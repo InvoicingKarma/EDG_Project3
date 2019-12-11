@@ -28,7 +28,7 @@ public class GoatBehavior : MonoBehaviour
 
         if (respawning == true)
         {
-            //prevent the foot from stomping it again
+            RespawnGoat();
         }
 
         animator.SetFloat("Speed", Mathf.Abs(mySpeed));
@@ -56,10 +56,9 @@ public class GoatBehavior : MonoBehaviour
         rb.MovePosition(transform.position + totalMovement.normalized * speed * Time.deltaTime);
     }
 
-    void RespawnGoat()
+    public void RespawnGoat()
     {
-        //Do the stomped animation
-        //Give some invulnerability frames so they can move away
+        animator.SetBool("IsStomped", true);
         respawning = false;
     }
 

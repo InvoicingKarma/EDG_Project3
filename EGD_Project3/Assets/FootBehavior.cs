@@ -21,6 +21,7 @@ public class FootBehavior : MonoBehaviour
         foot = GameObject.FindGameObjectWithTag("Foot");
         rb = GetComponent<Rigidbody2D>();
         animator.SetBool("IsStomping", false);
+        goat.GetComponent<GoatBehavior>().RespawnGoat();
     }
 
     // Update is called once per frame
@@ -60,6 +61,7 @@ public class FootBehavior : MonoBehaviour
             {
                 Debug.Log("I hit the Goat");
                 animator.SetBool("IsStomping", false);
+                GoatBehavior.respawning = true;
             }
             else
             {
