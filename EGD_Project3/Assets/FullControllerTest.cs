@@ -15,7 +15,7 @@ public class FullControllerTest : MonoBehaviour
         //isPaused = false;
         u = UduinoManager.Instance;
         u.DiscoverPorts();
-        for (int i = 2; i < 12; i++)
+        for (int i = 2; i < 11; i++)
         {
             u.pinMode(i, PinMode.Input_pullup);
             Debug.Log("Pin " + i + " initiated.");
@@ -28,18 +28,22 @@ public class FullControllerTest : MonoBehaviour
         if (u.digitalRead(2) == 0 || u.digitalRead(6) == 0)
         {
             transform.position += Vector3.left * speed * Time.deltaTime;
+            Debug.Log("You pressed Pin 2 or 6!");
         }
         if (u.digitalRead(3) == 0 || u.digitalRead(7) == 0)
         {
             transform.position += Vector3.up * speed * Time.deltaTime;
+            Debug.Log("You pressed Pin 3 or 7!");
         }
         if (u.digitalRead(4) == 0 || u.digitalRead(8) == 0)
         {
             transform.position += Vector3.down * speed * Time.deltaTime;
+            Debug.Log("You pressed Pin 4 or 8!");
         }
         if (u.digitalRead(5) == 0 || u.digitalRead(9) == 0)
         {
             transform.position += Vector3.right * speed * Time.deltaTime;
+            Debug.Log("You pressed Pin 5 or 9!");
         }
         /*if (u.digitalRead(10) == 0 || u.digitalRead(11) == 0)
         {

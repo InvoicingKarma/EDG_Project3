@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Uduino;
+using UnityEngine.SceneManagement;
 
 public class GoatBehavior : MonoBehaviour
 {
@@ -52,17 +53,21 @@ public class GoatBehavior : MonoBehaviour
             spriteRenderer.flipX = false;
             totalMovement += transform.right;
         }
+        if (Input.GetKey(KeyCode.R))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
 
         animator.SetFloat("Speed", Mathf.Abs(totalMovement.magnitude));
         //Debug.Log(Mathf.Abs(totalMovement.magnitude));
 
         // To ensure same speed on the diagonal, we ensure its magnitude here instead of earlier
-        rb.MovePosition(transform.position + totalMovement.normalized * speed * Time.deltaTime);
+        rb.MovePosition(transform.position + totalMovement.normalized * (speed * 1.5f) * Time.deltaTime);
         posLastFrame = transform.position;
 
         if (respawning == true)
         {
-            Debug.Log("I'm respawning");
+            //Debug.Log("I'm respawning");
             animator.SetBool("IsStomped", true);
         }
     }
