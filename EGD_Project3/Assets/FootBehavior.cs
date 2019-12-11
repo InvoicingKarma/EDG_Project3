@@ -20,6 +20,7 @@ public class FootBehavior : MonoBehaviour
         goat = GameObject.FindGameObjectWithTag("Goat");
         foot = GameObject.FindGameObjectWithTag("Foot");
         rb = GetComponent<Rigidbody2D>();
+        animator.SetBool("IsStomping", false);
     }
 
     // Update is called once per frame
@@ -51,20 +52,21 @@ public class FootBehavior : MonoBehaviour
 
         if (Input.GetKey(KeyCode.RightShift))
         {
+            animator.SetBool("IsStomping", true);
             Vector2 goat_pos = goat.transform.position;
             Vector2 foot_pos = foot.transform.position;
 
             if (Mathf.Round(goat_pos.x) == Mathf.Round(foot_pos.x) && Mathf.Round(goat_pos.y) == Mathf.Round(foot_pos.y))
             {
                 Debug.Log("I hit the Goat");
+                animator.SetBool("IsStomping", false);
             }
             else
             {
                 Debug.Log("I missed the Goat");
+                animator.SetBool("IsStomping", false);
             }
-
-            //Play the stomp animation
-            //if it is tell it that and have the goat play the stomped animation and start respawning
+            //if it hits tell it that and have the goat play the stomped animation and start respawning
         }
     }
 }
