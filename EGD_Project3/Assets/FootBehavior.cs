@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Uduino;
 
 public class FootBehavior : MonoBehaviour
 {
@@ -11,16 +12,17 @@ public class FootBehavior : MonoBehaviour
     public bool enter = true;
     public GameObject goat;
     public GameObject foot;
-    public AnimationClip stomp;
-    Animation anim;
+    public Animator animator;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        anim = GetComponent<Animation>();
         goat = GameObject.FindGameObjectWithTag("Goat");
         foot = GameObject.FindGameObjectWithTag("Foot");
         rb = GetComponent<Rigidbody2D>();
+        animator.SetBool("IsStomping", false);
+        //goat.GetComponent<GoatBehavior>().RespawnGoat();
     }
 
     // Update is called once per frame
@@ -52,24 +54,22 @@ public class FootBehavior : MonoBehaviour
 
         if (Input.GetKey(KeyCode.RightShift))
         {
-            anim.clip = stomp;
-            anim.Play();
-            Debug.Log("I played the animation");
-
             Vector2 goat_pos = goat.transform.position;
             Vector2 foot_pos = foot.transform.position;
 
             if (Mathf.Round(goat_pos.x) == Mathf.Round(foot_pos.x) && Mathf.Round(goat_pos.y) == Mathf.Round(foot_pos.y))
             {
+                animator.SetBool("IsStomping", true);
                 Debug.Log("I hit the Goat");
+                GoatBehavior.respawning = true;
             }
             else
             {
+                animator.SetBool("IsStomping", true);
                 Debug.Log("I missed the Goat");
+                animator.SetBool("IsStomping", false);
             }
-
-            //Play the stomp animation
-            //if it is tell it that and have the goat play the stomped animation and start respawning
+            //if it hits tell it that and have the goat play the stomped animation and start respawning
         }
     }
 }
