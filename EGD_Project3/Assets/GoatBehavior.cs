@@ -9,6 +9,7 @@ public class GoatBehavior : MonoBehaviour
     Rigidbody2D rb;
     public static bool respawning = false;
     public GameObject foot;
+    public Animator animator;
 
     // Start is called before the first frame update
     void Start()
@@ -22,11 +23,15 @@ public class GoatBehavior : MonoBehaviour
     void Update()
     {
         Vector3 totalMovement = Vector3.zero;
+        var vel = rb.velocity;
+        float mySpeed = vel.magnitude;
 
         if (respawning == true)
         {
             //prevent the foot from stomping it again
         }
+
+        animator.SetFloat("Speed", Mathf.Abs(mySpeed));
 
         transform.position = my_math.Wrap(transform.position, bounds);
 

@@ -11,13 +11,10 @@ public class FootBehavior : MonoBehaviour
     public bool enter = true;
     public GameObject goat;
     public GameObject foot;
-    public AnimationClip stomp;
-    Animation anim;
 
     // Start is called before the first frame update
     void Start()
     {
-        anim = GetComponent<Animation>();
         goat = GameObject.FindGameObjectWithTag("Goat");
         foot = GameObject.FindGameObjectWithTag("Foot");
         rb = GetComponent<Rigidbody2D>();
@@ -52,10 +49,6 @@ public class FootBehavior : MonoBehaviour
 
         if (Input.GetKey(KeyCode.RightShift))
         {
-            anim.clip = stomp;
-            anim.Play();
-            Debug.Log("I played the animation");
-
             Vector2 goat_pos = goat.transform.position;
             Vector2 foot_pos = foot.transform.position;
 
